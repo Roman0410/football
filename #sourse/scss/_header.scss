@@ -139,6 +139,11 @@
     }
   }
   .nav-item {
+    &:focus {
+      .nav-link {
+        color: var(--accent-color);
+      }
+    }
   }
   .nav-link {
     color: #fff;
@@ -148,12 +153,14 @@
     font-weight: 300;
     line-height: normal;
     transition: color 0.2s ease;
-    &:hover {
+    &:hover,
+    &:active {
       color: var(--accent-color);
       @media screen and (max-width: 768px) {
         background: rgba(255, 78, 39, 0.44);
       }
     }
+
     @media screen and (max-width: 768px) {
       color: #fff;
       font-size: 24px;
